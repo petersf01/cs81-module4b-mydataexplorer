@@ -42,6 +42,8 @@ function averageSleepHours(weekdata) {
 
 // Function to find the most frequent mood
 function mostFrequentMood(weekdata) {
+    // Array object to count occurrences of each mood.
+    // Note the case, I had this lower and it did not work.
     let moodCount = { Poor: 0, Average: 0, Good: 0, Excellent: 0 };
     for (let day of weekdata) {
         moodCount[day.mood] = moodCount[day.mood] + 1;
